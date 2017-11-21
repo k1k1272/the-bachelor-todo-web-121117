@@ -1,7 +1,6 @@
 def get_first_name_of_season_winner(data, season)
   data.map do |year, girls|
     p year
-    p season
   end
 end
 
