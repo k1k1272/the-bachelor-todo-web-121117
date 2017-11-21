@@ -1,6 +1,6 @@
 def get_first_name_of_season_winner(data, season)
   data.map do |year, girls|
-    return true if year.instance_of?(String)
+    true if year.instance_of?(String)
   end
 end
 
