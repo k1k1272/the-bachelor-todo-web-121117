@@ -11,7 +11,7 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  data.map { |year, girls| girls.map { |girl| girl["hometown"] == hometown ? girl["occupation"] : nil }.compact }.flatten.first
+  data.map { |year, girls| girls.map { |girl| return girl["occupation"] if girl["hometown"] == hometown } }
 end
 
 def get_average_age_for_season(data, season)
