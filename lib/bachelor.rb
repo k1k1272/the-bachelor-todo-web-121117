@@ -8,7 +8,7 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   count = 0
-  data.map { |year, girls| girls.map { |girl| count += 1 if girl["hometown"] == hometown }.compact}
+  data.map { |year, girls| girls.map { |girl| count += 1 if girl["hometown"] == hometown } }
   count
 end
 
