@@ -17,5 +17,5 @@ end
 def get_average_age_for_season(data, season)
   total = []
   data.map { |year, girls| girls.select { |girl| total << girl["age"].to_i if year == season}}
-  total / total.count
+  total 
 end
