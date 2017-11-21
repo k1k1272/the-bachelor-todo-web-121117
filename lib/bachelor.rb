@@ -7,7 +7,7 @@ def get_contestant_name(data, occ)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  data.map { |year, girls| girls.map { |girl| girl["name"] if girl["hometown"] == hometown }.compact.delete([])}
+  data.map { |year, girls| girls.map { |girl| girl["name"] if girl["hometown"] == hometown }.compact}
 end
 
 def get_occupation(data, hometown)
