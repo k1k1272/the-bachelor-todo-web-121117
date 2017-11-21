@@ -1,5 +1,5 @@
 def get_first_name_of_season_winner(data, season)
-  data[season]
+  data.each { |year, info| info["name"] if year == season && info["status"] == winner }
 end
 
 def get_contestant_name(data, occupation)
