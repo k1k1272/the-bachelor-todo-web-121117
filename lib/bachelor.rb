@@ -15,5 +15,7 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  total = []
+  data.map { |year, girls| girls.select { |girl| total << girl["age"] if year == season}}
+  total
 end
