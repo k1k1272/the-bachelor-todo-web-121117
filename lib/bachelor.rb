@@ -1,11 +1,9 @@
 def get_first_name_of_season_winner(data, season)
-  final = ""
   data.map do |year, girls|
-    girls.map do |girl|
-      final = girl[:name].split(" ").first if year.to_s == season && girl[:status] == "Winner"
+    girls.select do |girl|
+      girl[:name].split(" ").first if year.to_s == season && girl[:status] == "Winner"
     end
   end
-  final
 end
 
 def get_contestant_name(data, occupation)
